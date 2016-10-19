@@ -1,0 +1,29 @@
+
+  @charset "utf-8";
+
+  body {
+    background: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+    font: 100%/1.5 "Helvetica Neue", Helvetica, sans-serif;
+  }
+
+  body > * {
+    max-width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .staff-members,
+  .staff-members li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .staff-members img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
