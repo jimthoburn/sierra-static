@@ -313,7 +313,15 @@
   }
   main > p,
   main > ul {
-    margin-left: 3em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+  }
+  @media (min-width: 60em) {
+    main > p,
+    main > ul {
+      margin-left: 3em;
+      margin-right: 3em;
+    }
   }
 
 
@@ -340,14 +348,18 @@
   ----------------------------------------------- */
   .parents {
     margin-top: 1.5em;
-    padding-left: 3em;
-    padding-right: 3em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
     /*
     column-count: 2;
     column-gap: 2.5em;
     */
   }
   @media (min-width: 60em) {
+    .parents {
+      padding-left: 3em;
+      padding-right: 3em;
+    }
     .parents:after {
       content: "";
       display: table;
@@ -373,7 +385,12 @@
   /* =Schedule
   ----------------------------------------------- */
   .schedule {
-    padding: 3em;
+    padding: 1.5em;
+  }
+  @media (min-width: 60em) {
+    .schedule {
+      padding: 3em;
+    }
   }
   .schedule section h2 {
     margin-top: 0;
@@ -530,10 +547,17 @@
   }
 
   .intro-list {
-    min-height: 80vh;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  @media (min-width: 60em) {
+    .intro-list {
+      min-height: 80vh;
+    }
   }
   .intro-list div {
     padding-left: 1.5em;
@@ -567,11 +591,13 @@
     clear: both;
   }
   .staff-list section {
-    padding-left: 3em;
-    padding-right: 3em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
   }
   @media (min-width: 60em) {
     .staff-list section {
+      padding-left: 3em;
+      padding-right: 3em;
       float: left;
       width: 33.333%;
       box-sizing: border-box;
