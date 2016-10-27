@@ -1,29 +1,408 @@
 
   @charset "utf-8";
 
+  /* =Elements
+  ----------------------------------------------- */
   body {
     background: white;
-    color: black;
+    color: rgb(42, 53, 56);
+    font: 100%/1.5 "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    font: 100%/1.5 "Helvetica Neue", Helvetica, sans-serif;
   }
 
-  body > * {
+  @media (min-width: 400px) and (min-height: 200px) {
+    body {
+      font-size: 112.5%;
+    }
+  }
+
+  @media (min-width: 500px) and (min-height: 250px) {
+    body {
+      font-size: 125%;
+    }
+  }
+
+  @media (min-width: 1000px) and (min-height: 50px) {
+    body {
+      font-size: 137.5%;
+    }
+  }
+
+  @media (min-width: 1500px) and (min-height: 750px) {
+    body {
+      font-size: 150%;
+    }
+  }
+
+  @media (min-width: 2000px) and (min-height: 1000px) {
+    header ul {
+      font-size: 1.5em;
+    }
+  }
+
+  a {
+    color: rgb(255, 204, 0); /* @gold */
+    color: rgb(0, 51, 135); /* @ocean */
+  }
+
+  h1, h2, h3, h4, h5, h6, p, ol, ul, dl, figure {
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 1.5em;
+    font-weight: inherit;
+  }
+  h1, h2, h3, h4, h5, h6, p {
     max-width: 40em;
-    margin-left: auto;
-    margin-right: auto;
   }
 
-  .staff-members,
-  .staff-members li {
+  h1 {
+    font-size: 3em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+  }
+
+  h2 {
+    font-size: 2em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+  }
+
+  h3 {
+    font-size: 1.25em;
+    margin-top: 1.2em;
+    margin-bottom: 0.6em;
+  }
+
+  h4 {
+    font-size: 1.125em;
+    margin-top: 1.3333333333em;
+    margin-bottom: 0.6666666667em;
+  }
+
+  h5, h6 {
+    font-size: 1em;
+  }
+
+  h6 {
+    font-style: italic;
+    font-weight: normal;
+  }
+
+  table, th, td {
+    border-style: solid;
+    border-color: rgba(204, 204, 204);
+  }
+  table {
+    border-width: 1px 0 0 1px;
+    border-spacing: 0;
+  }
+  th, td {
+    border-width: 0 1px 1px 0;
+    padding: 0.375em 0.75em;
+  }
+
+  .number {
+    text-align: right;
+  }
+
+  .note {
+    font-size: 0.75em;
+    opacity: 0.75;
+  }
+
+
+  /* =Header
+  ----------------------------------------------- */
+  header {
+    padding: 1em 3em;
+    background-color: rgb(255, 204, 0); /* @gold */
+    color: rgba(0, 0, 0, 0.9);
+  }
+  header a,
+  footer a {
+    color: inherit;
+  }
+  header h2,
+  header p {
+    margin: 0;
+    display: inline;
+  }
+  header h2 {
+    font-size: inherit;
+    font-weight: bold;
+    margin-right: 1.5em;
+  }
+  header h2 a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+  header h2 + p {
+    font-style: italic;
+  }
+  header ul {
+    float: right;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  header ul,
+  header li,
+  footer ul,
+  footer li {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
   }
-  .staff-members img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
+  header li,
+  footer li {
+    display: inline;
+    margin-right: 1.5em;
+    display: inline-block;
   }
+
+
+  /* =Footer
+  ----------------------------------------------- */
+  footer {
+    margin-top: 3em;
+    padding: 3em;
+    background-color: rgb(255, 204, 0); /* @gold */
+    color: rgba(0, 0, 0, 0.9);
+  }
+  footer h2 {
+    margin-top: 0;
+    font-size: inherit;
+    font-weight: bold;
+    line-height: inherit;
+  }
+
+  footer .contact {
+    display: flex;
+    justify-content: space-around;
+  }
+  footer .contact p {
+    margin-top: 0;
+  }
+  footer .legal {
+    text-align: center;
+    max-width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  footer .legal h2 img {
+    width: 5.25em;
+    height: 5.25em;
+  }
+  footer .legal h2,
+  footer .legal p {
+    max-width: none;
+  }
+  footer .nav ul {
+    margin-top: 3em;
+    max-width: none;
+    text-align: center;
+  }
+
+  @media (min-width: 60em) {
+
+  }
+
+  /*
+  @media (min-width: 60em) {
+    footer:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    footer .contact {
+      float: left;
+      width: 40%;
+    }
+    footer .legal {
+      float: left;
+      margin-left: 10%;
+      width: 50%;
+    }
+    footer .legal h2 {
+      font-size: inherit;
+      margin-top: 0;
+    }
+    footer .legal h2 + p {
+      margin-top: 0;
+    }
+
+    footer .nav {
+      padding-top: 1.5em;
+      clear: both;
+    }
+    footer .nav {
+      display: flex;
+    }
+    footer .nav ul {
+      width: 50%;
+    }
+    footer .nav ul:first-child {
+      width: 40%;
+    }
+    footer .nav ul:last-child {
+      margin-left: 10%;
+    }
+  }
+  */
+
+
+  /* =Main
+  ----------------------------------------------- */
+  .text {
+    max-width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+  }
+  main h1:first-child {
+    margin-top: 0.5em;
+  }
+
+
+  /* =Schedule
+  ----------------------------------------------- */
+  .schedule {
+    padding: 3em;
+  }
+  .schedule:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .schedule section h2 {
+    margin-top: 0;
+  }
+  .schedule section dl:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .schedule section dt {
+    font-style: italic;
+    clear: both;
+    float: left;
+    width: 5em;
+    text-align: right;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .schedule section dd {
+    margin-left: 0;
+    padding-left: 0.75em;
+    float: left;
+    width: 10em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .schedule > section {
+    float: left;
+    width: 50%;
+  }
+
+
+  /* =News
+  ----------------------------------------------- */
+  .news,
+  .news li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .news li {
+    padding: 3em;
+  }
+  .news li:nth-child(3n+1) {
+    background-color: rgb(222, 222, 222); /* @silver */
+  }
+  .news li:nth-child(3n+2) {
+    background-color: rgb(238, 238, 238); /* @seashell */
+  }
+  .news .images {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .news .images img {
+    flex-basis: 50%;
+  }
+
+
+  /* =Home
+  ----------------------------------------------- */
+  .intro {
+    position: relative;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+  .intro:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .intro div {
+    position: relative;
+    z-index: 1;
+  }
+  .intro div p,
+  .intro div ul {
+    font-size: 1.5em;
+  }
+
+
+  /* =Staff
+  ----------------------------------------------- */
+  .staff-list:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .staff-list section {
+    float: left;
+    width: 33.333%;
+    box-sizing: border-box;
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+  .staff-list img {
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+    object-fit: cover;
+  }
+  .staff-list ul,
+  .staff-list li {
+    list-style: none;
+    marign-left: 0;
+    padding-left: 0;
+  }
+  .staff-list h3 {
+    font-size: inherit;
+    margin-bottom: 0;
+  }
+  .staff-list h3 + p {
+    margin-top: 0;
+    font-style: italic;
+  }
+

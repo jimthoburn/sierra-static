@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bell Schedule at Sierra High School</title>
 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700" />
   <link rel="stylesheet" href="css/shared.css" />
 </head>
 <body>
@@ -14,7 +15,7 @@
 
     <ul>
       <li><a href="home.html">Home</a></li>
-      <li><a href="about.html">Our School</a></li>
+      <li><a href="about.html">About</a></li>
       <li><a href="staff.html">Staff</a></li>
       <li><a href="schedule.html">Bell Schedule</a></li>
       <li><a href="parents.html">Parents</a></li>
@@ -22,64 +23,69 @@
     </ul>
   </header>
 
-  <main>
+  <main class="schedule">
     <h1>Bell Schedule</h1>
 
     <section>
       <h2>Sierra High School</h2>
 
-      <h3>Regular (Monday, Tuesday, Thursday and Friday)</h3>
-      <dl>
-        <dt>Period 1</dt>
-        <dd>8:00 - 8:46</dd>
+      <section>
+        <h3>All days except Wednesday</h3>
+        <dl>
+          <dt>Period 1</dt>
+          <dd>8:00 - 8:46</dd>
 
-        <dt>Period 2</dt>
-        <dd>8:56 - 9:48</dd>
+          <dt>Period 2</dt>
+          <dd>8:56 - 9:48</dd>
 
-        <dt>Period 3</dt>
-        <dd>9:51 - 10:43</dd>
+          <dt>Period 3</dt>
+          <dd>9:51 - 10:43</dd>
 
-        <dt>Period 4</dt>
-        <dd>10:09 - 11:38</dd>
+          <dt>Period 4</dt>
+          <dd>10:09 - 11:38</dd>
 
-        <dt>Lunch</dt>
-        <dd>11:38 - 12:10</dd>
+          <dt>Lunch</dt>
+          <dd>11:38 - 12:10</dd>
 
-        <dt>Period 5</dt>
-        <dd>12:13 - 1:05</dd>
+          <dt>Period 5</dt>
+          <dd>12:13 - 1:05</dd>
 
-        <dt>Period 6</dt>
-        <dd>1:08 - 2:00</dd>
-      </dl>
+          <dt>Period 6</dt>
+          <dd>1:08 - 2:00</dd>
+        </dl>
+      </section>
 
-      <h3>Wednesday</h3>
-      <dl>
-        <dt>Period 1</dt>
-        <dd>8:00-8:46</dd>
+      <section>
+        <h3>Wednesday</h3>
+        <dl>
+          <dt>Period 1</dt>
+          <dd>8:00-8:46</dd>
 
-        <dt>Period 2</dt>
-        <dd>8:49-9:34</dd>
+          <dt>Period 2</dt>
+          <dd>8:49-9:34</dd>
 
-        <dt>Period 3</dt>
-        <dd>9:37-10:22</dd>
+          <dt>Period 3</dt>
+          <dd>9:37-10:22</dd>
 
-        <dt>Period 4</dt>
-        <dd>10:25-11:10</dd>
+          <dt>Period 4</dt>
+          <dd>10:25-11:10</dd>
 
-        <dt>Period 5</dt>
-        <dd>11:13-11:58</dd>
+          <dt>Period 5</dt>
+          <dd>11:13-11:58</dd>
 
-        <dt>Lunch</dt>
-        <dd>11:58-12:30</dd>
+          <dt>Lunch</dt>
+          <dd>11:58-12:30</dd>
 
-        <dt>Period 6</dt>
-        <dd>12:33-1:18</dd>
-      </dl>
+          <dt>Period 6</dt>
+          <dd>12:33-1:18</dd>
+        </dl>
+      </section>
 
     </section>
 
     <section>
       <h2>S.O.A.R Academy</h2>
+      <h3>Monday–Friday</h3>
       <dl>
         <dt>Block 1</dt>
         <dd>8:30-9:40</dd>
@@ -106,23 +112,35 @@
   </main>
 
   <footer>
-    <h2>Sierra High School</h2>
-    <p>1134 South Barranca Avenue<br />Glendora, CA 91740</p>
-    <p>(626) 852-8300</p>
-    <p>Paul Hernandez, Principal<br /><a href="mailto:phernandez@azusa.org">phernandez@azusa.org</a></p>
-    <p>Carmen Oronia-Jara, School Secretary<br /><a href="mailto:carmenj@azusausd.k12.ca.us">carmenj@azusausd.k12.ca.us</a></p>
 
-    <p>The District prohibits, at any district school or school activity, unlawful discrimination, harassment, intimidation, and bullying of any student based on the student’s actual race, color, ancestry, national origin, ethnic group, identication, age, religion, marital or parental status, physical or mental disability, sex, sexual orientation, gender, gender identity, or gender expression; the perception of one or more of such characteristics; or association with a person or group with one or more these actual or perceived characteristics.</p>
+    <div class="contact">
+      <div>
+        <h2>Sierra High School</h2>
+        <p>1134 South Barranca Avenue<br />Glendora, CA 91740</p>
+        <p>(626) 852-8300</p>
+      </div>
+      <p><strong>Paul Hernandez, Principal</strong><br /><a href="mailto:phernandez@azusa.org">phernandez@azusa.org</a></p>
+      <p><strong>Carmen Oronia-Jara, School Secretary</strong><br /><a href="mailto:carmenj@azusausd.k12.ca.us">carmenj@azusausd.k12.ca.us</a></p>
+    </div>
 
-    <ul>
-      <li><a href="">User Agreement</a></li>
-      <li><a href="">Privacy Notice</a></li>
-      <li><a href="">Security &amp; Data Policy</a></li>
-    </ul>
-    <ul>
-      <li><a href="">Staff Login</a></li>
-      <li><a href="">Site Map</a></li>
-    </ul>
+    <div class="legal">
+      <h2><a href="http://azusa.org"><img src="images/azusa-district.png" width="100" height="100" alt="Azusa Unified School District" /></a></h2>
+      <p>The District prohibits, at any district school or school activity, unlawful discrimination, harassment, intimidation, and bullying of any student based on the student’s actual race, color, ancestry, national origin, ethnic group, identication, age, religion, marital or parental status, physical or mental disability, sex, sexual orientation, gender, gender identity, or gender expression; the perception of one or more of such characteristics; or association with a person or group with one or more these actual or perceived characteristics.</p>
+    </div>
+
+    <div class="nav">
+      <ul>
+        <li><a href="">User Agreement</a></li>
+        <li><a href="">Privacy Notice</a></li>
+        <li><a href="">Security &amp; Data Policy</a></li>
+      </ul>
+      <!--
+      <ul>
+        <li><a href="">Staff Login</a></li>
+        <li><a href="">Site Map</a></li>
+      </ul>
+      -->
+    </div>
   </footer>
 </body>
 </html>
