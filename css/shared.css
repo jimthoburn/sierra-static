@@ -325,11 +325,59 @@
   }
 
 
+  /* =Academics
+  ----------------------------------------------- */
+  .academics header {
+    position: absolute;
+    background-color: transparent;
+    z-index: 1;
+    padding-left: 1.5em;
+  }
+  .academics main {
+    background-color: rgb(237, 237, 239);
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 0;
+  }
+  .academics main .message {
+    position: relative;
+    z-index: 1;
+    padding: 4.5em 1.5em 1.5em;
+  }
+  .academics main h1 {
+    text-transform: uppercase;
+    font-size: 2em;
+    font-family: "Roboto Slab", "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
+    margin-bottom: 0;
+  }
+  .academics main h2 {
+    margin-top: 0.375em;
+    font-family: "Roboto Slab", "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
+    border-top: 2px solid;
+    padding-top: 0.65em;
+    font-size: 1.25em;
+    line-height: 1.2;
+  }
+  .academics main > img {
+    display: block;
+  }
+  @media (min-width: 60em) {
+    .academics main > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: auto;
+    }
+    .academics main .message {
+      padding: 4.5em 3em 1.5em;
+      margin-left: 33.333%;
+    }
+  }
+
+
   /* =Principal
   ----------------------------------------------- */
-  .principal {
-
-  }
   .principal header {
     position: absolute;
     background-color: transparent;
@@ -369,6 +417,7 @@
   .principal main h1 {
     text-transform: uppercase;
     font-size: 2em;
+    font-family: "Roboto Slab", "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
   }
   .principal main {
     background-color: rgb(0, 51, 135); /* @ocean */
