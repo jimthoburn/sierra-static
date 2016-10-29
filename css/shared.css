@@ -328,10 +328,16 @@
   /* =Academics
   ----------------------------------------------- */
   .academics header {
-    position: absolute;
-    background-color: transparent;
-    z-index: 1;
-    padding-left: 1.5em;
+    background-color: rgb(237, 237, 239);
+  }
+  @media (min-width: 60em) {
+    .academics header {
+      position: absolute;
+      z-index: 1;
+      padding-left: 1.5em;
+      width: 100%;
+      box-sizing: border-box;
+    }
   }
   .academics main {
     background-color: rgb(237, 237, 239);
@@ -342,16 +348,17 @@
   .academics main .message {
     position: relative;
     z-index: 1;
-    padding: 4.5em 1.5em 1.5em;
+    padding: 1.5em;
   }
   .academics main h1 {
     text-transform: uppercase;
     font-size: 2em;
+    line-height: 1.2;
     font-family: "Roboto Slab", "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
     margin-bottom: 0;
   }
   .academics main h2 {
-    margin-top: 0.375em;
+    margin-top: 0.65em;
     font-family: "Roboto Slab", "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
     border-top: 2px solid;
     padding-top: 0.65em;
@@ -370,7 +377,7 @@
       width: auto;
     }
     .academics main .message {
-      padding: 4.5em 3em 1.5em;
+      padding: 6em 3em 1.5em;
       margin-left: 33.333%;
     }
   }
@@ -384,6 +391,8 @@
     color: white;
     z-index: 1;
     padding-left: 1.5em;
+    width: 100%;
+    box-sizing: border-box;
   }
   .principal main .feature {
     position: relative;
