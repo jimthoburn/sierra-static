@@ -602,22 +602,21 @@
   .home main .staff-list {
     
   }
-  .parents-summary-home,
-  .news-summary-home {
+  @media (min-width: 40em) {
+    .summaries {
+      display: flex;
+    }
+  }
+  .summaries div {
+    flex-basis: 50%;
     padding: 3em 1.5em;
     background-color: rgb(222, 222, 222); /* @silver */
   }
-  .parents-summary-home {
-    padding-top: 6em;
-    padding-bottom: 6em;
-  }
-  .parents-summary-home {
+  .summaries .parents-summary {
     background-color: rgb(238, 238, 238); /* @seashell */
   }
-  .parents-summary-home a {
-    color: inherit;
-  }
-  .parents-summary-home h2,
+  .summaries div h2,
+  .parents-summary h2,
   .news-summary-home h2 {
     margin: 0;
   }
@@ -653,7 +652,8 @@
       right: 1.5em;
 
     }
-    .parents-summary-home,
+    .summaries div,
+    .parents-summary,
     .news-summary-home {
        padding-left: 3em;
        padding-right: 3em;
