@@ -136,6 +136,7 @@
   ----------------------------------------------- */
   header {
     padding: 1em 1.5em;
+    background-color: rgb(255, 204, 0); /* @gold */
     color: rgba(0, 0, 0, 0.9);
   }
   @media (min-width: 60em) {
@@ -166,6 +167,10 @@
     font-style: italic;
     opacity: 0.75;
   }
+  header .nav-link {
+    float: right;
+    margin: 0;
+  }
   header ul {
     margin-bottom: 0;
   }
@@ -186,7 +191,8 @@
   header li,
   footer li {
     display: inline;
-    margin-right: 1.5em;
+    margin-left: 0.75em;
+    margin-right: 0.75em;
     display: inline-block;
   }
 
@@ -239,6 +245,10 @@
     margin-top: 3em;
     max-width: none;
     text-align: center;
+  }
+  footer .nav:first-child ul {
+    margin-top: 0;
+    margin-bottom: 6em;
   }
 
   @media (min-width: 60em) {
@@ -321,137 +331,6 @@
       margin-left: 3em;
       margin-right: 3em;
     }
-  }
-
-
-  /* =Academics
-  ----------------------------------------------- */
-  .academics header {
-    background-color: rgb(237, 237, 239);
-  }
-  @media (min-width: 60em) {
-    .academics header {
-      position: absolute;
-      z-index: 2;
-      padding-left: 1.5em;
-      width: 100%;
-      box-sizing: border-box;
-    }
-  }
-  .academics main {
-    background-color: rgb(237, 237, 239);
-    position: relative;
-    min-height: 100vh;
-    padding-bottom: 0;
-  }
-  .academics main .message {
-    position: relative;
-    z-index: 1;
-    padding: 1.5em;
-  }
-  .academics main h1 {
-    text-transform: uppercase;
-    font-size: 2em;
-    line-height: 1.2;
-    font-family: "Roboto Slab", "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
-    margin-bottom: 0;
-  }
-  .academics main h2 {
-    margin-top: 0.65em;
-    font-family: "Roboto Slab", "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
-    border-top: 2px solid;
-    padding-top: 0.65em;
-    font-size: 1.25em;
-    line-height: 1.2;
-  }
-  .academics main > img {
-    display: block;
-  }
-  @media (min-width: 60em) {
-    .academics main > img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: auto;
-    }
-    .academics main .message {
-      padding: 6em 3em 1.5em;
-      margin-left: 33.333%;
-    }
-  }
-
-
-  /* =Principal
-  ----------------------------------------------- */
-  .principal header {
-    position: absolute;
-    background-color: transparent;
-    color: white;
-    z-index: 1;
-    padding-left: 1.5em;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  .principal main .feature {
-    position: relative;
-  }
-  .principal main .feature::before {
-    content: "";
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0));
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .principal main .feature img {
-    width: 100%;
-    height: 80vh;
-    object-fit: cover;
-  }
-  .principal main .feature p {
-    position: absolute;
-    z-index: 1;
-    bottom: 1.5em;
-    left: 1.5em;
-  }
-  .principal main ul,
-  .principal main li {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
-  }
-  .principal main h1 {
-    text-transform: uppercase;
-    font-size: 2em;
-    font-family: "Roboto Slab", "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
-  }
-  .principal main {
-    background-color: rgb(0, 51, 135); /* @ocean */
-    color: white;
-    padding-bottom: 0;
-  }
-  .principal main a {
-    color: inherit;
-  }
-  .principal main .message {
-    padding: 3em 1.5em;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 40em;
-  }
-  .principal main ul {
-    margin-top: 0;
-    display: flex;
-    width: 100%;
-    margin-bottom: 0;
-  }
-  .principal main ul img {
-    display: block;
-  }
-  .principal footer {
-    background-color: white;
   }
 
 
@@ -623,143 +502,212 @@
 
   /* =Home
   ----------------------------------------------- */
-  .intro {
-    position: relative;
-    background-color: black;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  .home header {
+    position: absolute;
+    background-color: transparent;
     color: white;
-    height: 85vh;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    text-align: center;
+    z-index: 1;
+    padding-left: 1.5em;
+    width: 100%;
+    box-sizing: border-box;
   }
-  .intro:after {
+  .home main {
+    padding-bottom: 0;
+  }
+  .home main .feature {
+    position: relative;
+    background: black;
+    color: white;
+  }
+  .home main .feature::before {
     content: "";
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0));
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2);
   }
-  .intro div {
-    position: relative;
+  .home main .feature img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+  }
+  .home main .feature p {
+    position: absolute;
     z-index: 1;
+    bottom: 1.5em;
+    left: 1.5em;
   }
-  .intro div p,
-  .intro div ul {
-    font-size: 1.5em;
+  .home main .feature a {
+    color: inherit;
   }
-  .intro ul,
-  .intro li {
+  .home main .principals-message + ul,
+  .home main .principals-message + ul li {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
   }
-  .intro p {
-    max-width: 25em;
-    padding-right: 1.5em;
-    padding-left: 1.5em;
-    margin-left: auto;
-    margin-right: auto;
+  .home main .principals-message h1 {
+    text-transform: uppercase;
+    font-size: 2em;
+    font-family: "Roboto Slab", "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
   }
-  .intro strong {
-    font-weight: inherit;
-    text-decoration: underline;
-    color: rgb(255, 204, 0); /* @gold */
+  .home main .principals-message a {
+    color: inherit;
   }
-  .intro strong span {
+  .home main .principals-message {
+    background-color: rgb(0, 51, 135); /* @ocean */
     color: white;
   }
-
-  .intro-list {
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
-    box-sizing: border-box;
+  .home main .principals-message > div {
+    padding: 3em 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 40em;
+  }
+  .home main .principals-message + ul {
+    margin-top: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .home main .principals-message + ul img {
+    display: block;
+  }
+
+  .academics {
+    background-color: rgb(237, 237, 239);
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 0;
+  }
+  .academics > div {
+    position: relative;
+    z-index: 1;
+    padding: 1.5em;
+  }
+  .academics h1 {
+    text-transform: uppercase;
+    font-size: 2em;
+    line-height: 1.2;
+    font-family: "Roboto Slab", "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
+    margin-bottom: 0;
+  }
+  .academics h2 {
+    margin-top: 0.65em;
+    font-family: "Roboto Slab", "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
+    border-top: 2px solid;
+    padding-top: 0.65em;
+    font-size: 1.25em;
+    line-height: 1.2;
+  }
+  .academics > img {
+    display: block;
   }
   @media (min-width: 60em) {
-    .intro-list {
-      min-height: 80vh;
+    .academics > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: auto;
     }
-  }
-  .intro-list div {
-    padding-left: 1.5em;
-    padding-right: 1.5em;
-  }
-  .intro-list h2 {
-    font-size: 1.5em;
-    line-height: inherit;
-  }
-  .intro-list h2,
-  .intro-list ul {
-    margin: 0;
-  }
-  .intro-list ul {
-    margin-top: 0.75em;
-    font-style: italic;
-  }
-  .intro-list ul,
-  .intro-list li {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
+    .academics div {
+      padding: 6em 3em 1.5em;
+      margin-left: 33.333%;
+    }
   }
 
 
   /* =Staff
   ----------------------------------------------- */
-  .staff-list:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  .staff-list section {
-    padding-left: 1.5em;
-    padding-right: 1.5em;
+  .staff-list {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
   }
   @media (min-width: 60em) {
-    .staff-list section {
-      padding-left: 3em;
-      padding-right: 3em;
-      float: left;
-      width: 33.333%;
-      box-sizing: border-box;
+    .staff-list {
+      margin-left: 3em;
+      margin-right: 3em;
     }
-  }
-  .staff-list img {
-    border-radius: 50%;
-    width: 5em;
-    height: 5em;
-    object-fit: cover;
   }
   .staff-list ul,
   .staff-list li {
+    /* @reset-list */
     list-style: none;
-    marign-left: 0;
+    margin-left: 0;
     padding-left: 0;
   }
-  @media (min-width: 70em) {
-    .staff-list img {
-      float: right;
-    }
+  .staff-list ul {
+    max-width: none;
+    font-size: 0.8181818182em; /* 18px / 22px */
+    line-height: 1.2222222222; /* 22px / 18px */
+    margin-left: -1.5em; /* item padding */
+    margin-right: -1.5em;
+
+    /* @flex-box-wrap */
+    display: -webkit-flex;
+    display:         flex;
+
+    -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  .staff-list li {
+    color: rgb(41, 53, 57);
+    width: 100%;
+    padding: 1.5em;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  .staff-list a {
+    color: inherit;
+    font-style: inherit;
+    text-decoration: inherit;
+  }
+  .staff-list img {
+    border-radius: 50%;
+  }
+
+  /* SHIM: This is prefixed with “main” so IE8 will ignore it (since it doesn’t understand HTML5 elements) */
+  main .staff-list img {
+
+    /* Make images shrink or grow to fit the available space */
+    width: 100%;
+    height: auto;
+
+    /* But don’t let them get too large (for the case where there’s only one column) */
+    /*
+    max-width: 15em;
+    */
+  }
+
+  .staff-list h3,
+  .staff-list p {
+    max-width: none;
   }
   .staff-list h3 {
-    font-size: inherit;
-    margin-bottom: 0;
-  }
-  .staff-list h3 + p {
-    margin-top: 0;
-    font-style: italic;
+    margin: 0.75em 0 0 0;
   }
   .staff-list p {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
+    font-style: italic;
+    opacity: 0.6;
+  }
+
+  @media (min-width: 20em) {
+    .staff-list li {
+      width: 50%;
+    }
+  }
+  @media (min-width: 40em) {
+    .staff-list li {
+      width: 33.333%;
+    }
+  }
+  @media (min-width: 60em) {
+    .staff-list li {
+      width: 25%;
+    }
   }
 
