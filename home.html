@@ -36,8 +36,28 @@
         </ul>
         <p>Learn more <a href="about.html">about our school</a></p>
       </div>
-      <img src="images/IMG_0760-optimized.jpg" width="500" alt="" />
+      <img src="images/students/IMG_0760.jpg" width="500" alt="" />
     </div>
+    <script>
+    (function() {
+      var images = [
+        'images/students/IMG_0284.jpg',
+        'images/students/IMG_0325.jpg',
+        'images/students/IMG_0381.jpg',
+        'images/students/IMG_0482.jpg',
+        'images/students/IMG_0614.jpg',
+        'images/students/IMG_0683.jpg',
+        'images/students/IMG_0731.jpg',
+        'images/students/IMG_0760.jpg',
+        'images/students/IMG_1065.jpg'
+      ];
+      var min = 0;
+      var max = images.length - 1;
+      var random = Math.floor(Math.random() * (max - min + 1) + min);
+      var image = document.querySelector('.academics img');
+      image.src = images[random];
+    })();
+    </script>
 
     <div class="staff-list">
       <h2>Our teachers</h2>
