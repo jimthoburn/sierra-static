@@ -381,7 +381,7 @@
       background: black;
       background: rgba(0, 0, 0, 0.5);
     }
-    main > img:first-child + h1 + p {
+    main > img:first-child + h1 + * {
       margin-top: 3em;
     }
   }
@@ -400,7 +400,8 @@
     margin-right: 0.75em;
   }
   main > p,
-  main > ul {
+  main > ul,
+  main > dl {
     margin-left: 1.5em;
     margin-right: 1.5em;
   }
@@ -410,7 +411,8 @@
       margin-right: 1.5em;
     }
     main > p,
-    main > ul {
+    main > ul,
+    main > dl {
       margin-left: 3em;
       margin-right: 3em;
     }
@@ -488,25 +490,28 @@
   .schedule section h2 {
     margin-top: 0;
   }
-  .schedule section dl:after {
+  dl:after {
     content: "";
     display: table;
     clear: both;
   }
-  .schedule section dt {
+  dt {
     font-style: italic;
     clear: both;
     float: left;
-    width: 5em;
+    width: 25%;
     text-align: right;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
   }
-  .schedule section dd {
-    margin-left: 0;
+  dt + dd {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  dd {
     padding-left: 0.75em;
-    float: left;
-    width: 10em;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-left: 25%;
+    width: 75%;
+    box-sizing: border-box;
   }
   @media (min-width: 60em) {
     .schedule:after {
