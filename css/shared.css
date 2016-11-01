@@ -381,7 +381,8 @@
       background: black;
       background: rgba(0, 0, 0, 0.5);
     }
-    main > img:first-child + h1 + * {
+    main > img:first-child + h1 + p,
+    main > img:first-child + h1 + dl {
       margin-top: 3em;
     }
   }
