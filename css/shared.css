@@ -868,7 +868,7 @@
     clear: both;
   }
   .academics section {
-    padding: 1.5em;
+    padding: 75vh 1.5em 1.5em;
     /*
     display: flex;
     flex-direction: column;
@@ -877,7 +877,6 @@
     */
     position: relative;
     box-sizing: border-box;
-    min-height: 75vh;
     border-width: 0 0.25em 0.25em 0;
     border-style: solid;
     border-color: white;
@@ -895,12 +894,28 @@
   }
   .academics section:nth-child(1) {
     width: 100%;
+    padding-top: 50vh;
   }
   .academics section:nth-child(2),
   .academics section:nth-child(3),
   .academics section:nth-child(4),
-  .academics section:nth-child(5) {
-    min-height: 100vh;
+  .academics section:nth-child(5),
+  .academics section:nth-child(6) {
+    padding-top: 75vh;
+    min-height: 125vh;
+  }
+  .academics section:nth-child(6) {
+    padding-top: 100vh;
+    min-height: 154vh;
+  }
+  .academics section:nth-child(2),
+  .academics section:nth-child(4),
+  .academics section:nth-child(6) {
+    clear: both;
+  }
+  .academics section:nth-child(7),
+  .academics section:nth-child(8) {
+    padding-top: 50vh;
   }
   @media (min-width: 60em) {
     .academics section {
@@ -909,21 +924,11 @@
       width: 50%;
     }
   }
-  .academics section:nth-child(6) {
-    min-height: 100vh;
-  }
-  .academics section:nth-child(2) {
-    clear: both;
-  }
   @media (max-aspect-ratio: 1/1) {
     .academics section {
       width: 100%;
-      min-height: 100vh;
+      padding-top: 100vh;
     }
-  }
-  .academics section:nth-child(7),
-  .academics section:nth-child(8) {
-    min-height: 50vh;
   }
   .academics section img {
     position: absolute;
@@ -933,6 +938,7 @@
     left: 0;
     object-fit: cover;
   }
+  /*
   .academics section:nth-child(2) img,
   .academics section:nth-child(3) img,
   .academics section:nth-child(4) img,
@@ -940,6 +946,7 @@
   .academics section:nth-child(6) img  {
     object-position: top;
   }
+  */
   .academics section h2,
   .academics section ul {
     position: relative;
@@ -950,7 +957,7 @@
     padding: 0 0.75em 0 1.5em;
     display: table;
     background: rgb(0, 51, 135); /* @ocean */
-    background: rgba(0, 51, 135, 0.9); /* @ocean */
+    background: rgba(0, 51, 135, 0.95); /* @ocean */
     color: white;
     text-transform: none;
     font-weight: 500;
@@ -980,16 +987,20 @@
   }
   .academics section ul {
     margin: 0.75em 0 0;
+    background: white;
+    background: rgba(255, 255, 255, 0.95);
+    padding-top: 0.375em;
+    padding-bottom: 0.375em;
+    padding-left: 3em;
+    padding-right: 0.75em;
+    margin-left: -3em;
+    display: table;
   }
   .academics section ul li {
-    background: white;
-    background: rgba(255, 255, 255, 0.9);
-    display: table;
     color: rgb(42, 53, 56); /* @text-color */
-    padding-left: 3em;
-    padding-right: 0.375em;
-    margin-top: 0.375em;
-    margin-left: -3em;
+    /*
+    display: table;
+    */
   }
 
 
