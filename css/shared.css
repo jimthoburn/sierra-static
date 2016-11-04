@@ -899,6 +899,14 @@
       margin-left: 33.333%;
       margin-right: 5%;
     }
+    .introduction.reverse > img {
+      left: auto;
+      right: 0;
+    }
+    .introduction.reverse div {
+      margin-right: 33.333%;
+      margin-left: 5%;
+    }
   }
 
 

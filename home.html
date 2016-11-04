@@ -51,6 +51,13 @@
       var random = Math.floor(Math.random() * (max - min + 1) + min);
       var image = document.querySelector('.introduction img');
       image.src = images[random];
+      if (images[random].indexOf('IMG_0284.jpg') >= 0 ||
+          images[random].indexOf('IMG_0381.jpg') >= 0 ||
+          images[random].indexOf('IMG_0482.jpg') >= 0 ||
+          images[random].indexOf('IMG_0614.jpg') >= 0 ||
+          images[random].indexOf('IMG_1065.jpg') >= 0) {
+        image.parentNode.className += ' reverse';
+      }
     })();
     </script>
 
