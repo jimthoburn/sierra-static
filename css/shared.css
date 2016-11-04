@@ -268,10 +268,39 @@
     padding-left: 0;
   }
   header li,
-  nav li,
   footer li {
     margin: 0 0.75em 0.75em;
     display: inline-block;
+    vertical-align: top;
+  }
+  nav h2 {
+    font-size: inherit;
+    max-width: none;
+    font-weight: inherit;
+    text-transform: none;
+    font-family: inherit;
+    font-weight: bold;
+  }
+  nav > ul {
+    text-align: left;
+  }
+  @media (min-width: 60em) {
+    nav > ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+  nav li {
+    text-align: left;
+  }
+  nav > ul > li li a {
+    text-decoration: none;
+  }
+  nav > ul > li li a:hover,
+  nav > ul > li li a:active,
+  nav > ul > li li a:focus {
+    text-decoration: underline;
   }
 
 
@@ -329,11 +358,13 @@
   footer .legal p {
     max-width: none;
   }
+  nav form {
+    margin-top: 3em;
+  }
   nav ul {
     max-width: none;
     text-align: center;
     margin-top: 0;
-    margin-bottom: 3em;
   }
   footer .nav ul {
     margin-top: 3em;
@@ -413,7 +444,8 @@
   }
   main > p,
   main > ul,
-  main > dl {
+  main > dl,
+  main > section {
     margin-left: 1.5em;
     margin-right: 1.5em;
   }
@@ -424,7 +456,8 @@
     }
     main > p,
     main > ul,
-    main > dl {
+    main > dl,
+    main > section {
       margin-left: 3em;
       margin-right: 3em;
     }
@@ -828,9 +861,6 @@
     padding: 1.5em;
   }
   .introduction h1 {
-    font-size: 2em;
-    line-height: 1.5;
-    font-family: "Roboto Slab", "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
     margin-bottom: 0;
   }
   .introduction h2 {
