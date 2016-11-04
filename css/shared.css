@@ -508,7 +508,9 @@
     clear: both;
   }
   dt {
-    font-style: italic;
+    font-family: "Roboto Slab", "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 0.75em;
+    line-height: 2.25;
     clear: both;
     float: left;
     width: 25%;
@@ -517,6 +519,7 @@
     padding-top: 0.375em;
     padding-bottom: 0.375em;
     box-sizing: border-box;
+    text-transform: uppercase;
   }
   dt + dd {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -528,6 +531,10 @@
     margin-left: 25%;
     width: 75%;
     box-sizing: border-box;
+  }
+  dd em {
+    font-size: 0.875em;
+    line-height: 1.7142857143;
   }
 
   .schedule > section + section {
